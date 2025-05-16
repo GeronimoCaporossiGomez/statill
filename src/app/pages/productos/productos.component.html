@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<section class="productos">
+  <h2>Productos disponibles</h2>
+
+  <div class="producto" *ngFor="let p of productos">
+    <h3>{{ p.nombre }}</h3>
+    <p>${{ p.precio }}</p>
+    <button (click)="agregar(p)">Agregar al carrito</button>
+  </div>
+</section>

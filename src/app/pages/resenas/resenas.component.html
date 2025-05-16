@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<h2>Dejanos tu reseña ✏️</h2>
+
+<form (ngSubmit)="enviar()">
+  <input [(ngModel)]="nombre" name="nombre" placeholder="Tu nombre" required />
+
+  <select [(ngModel)]="estrellas" name="estrellas" required>
+    <option *ngFor="let s of [1, 2, 3, 4, 5]" [value]="s">{{ s }} ⭐</option>
+  </select>
+
+  <textarea [(ngModel)]="comentario" name="comentario" placeholder="Comentario" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<hr />
+
+<div *ngFor="let r of resenas" class="card">
+  <strong>{{ r.nombre }}</strong> — {{ r.estrellas }} ⭐
+  <p>{{ r.comentario }}</p>
+</div>

@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<h2>Descuentos 💸</h2>
+
+<div class="producto" *ngFor="let p of productos">
+  <h3>{{ p.nombre }}</h3>
+  <p>Precio original: ${{ p.precioOriginal }}</p>
+  <p>Descuento: {{ p.descuento }}%</p>
+  <p><strong>Precio final: ${{ precioFinal(p) | number:'1.0-0' }}</strong></p>
+</div>

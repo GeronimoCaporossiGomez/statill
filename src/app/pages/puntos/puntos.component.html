@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<h2>Puntos acumulados 🎯</h2>
+
+<p>Tus puntos: {{ puntos }}</p>
+<p>Objetivo: {{ objetivo }}</p>
+<p>Te faltan {{ faltan }} puntos para llegar.</p>
+
+<div class="barra">
+  <div class="progreso" [style.width.%]="progreso"></div>
+</div>

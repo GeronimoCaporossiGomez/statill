@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<h2>Tu carrito 🛒</h2>
+
+<div *ngIf="carrito.length === 0">No hay productos.</div>
+
+<div *ngFor="let p of carrito; let i = index" class="item">
+  <p>{{ p.nombre }} - ${{ p.precio }}</p>
+  <button (click)="quitar(i)">Quitar</button>
+</div>
+
+<div *ngIf="carrito.length">
+  <hr />
+  <p><strong>Total: ${{ total }}</strong></p>
+  <button (click)="comprar()">Finalizar compra</button>
+</div>

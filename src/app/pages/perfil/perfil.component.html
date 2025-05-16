@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<h2>Mi Perfil 🙋</h2>
+
+<div class="perfil">
+  <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+  <p><strong>Email:</strong> {{ usuario.email }}</p>
+  <p><strong>Puntos acumulados:</strong> {{ usuario.puntos }}</p>
+</div>
+
+<h3>Pre-órdenes</h3>
+
+<div *ngFor="let p of preordenes" class="orden">
+  <p><strong>{{ p.producto }}</strong></p>
+  <p>Estado: {{ p.estado }} | Fecha: {{ p.fecha }}</p>
+</div>
